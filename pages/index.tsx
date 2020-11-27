@@ -1,15 +1,26 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React, {Fragment} from 'react'
+import Head from 'next/head'
+import Status from '../components/Status'
+import {Mercado} from '../components/Atletas'
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
+  <Fragment>
+    <html lang="en">
+    <Head>
+      <meta charSet="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Cartola by edinho</title>
+    </Head>
+    <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div>
+        <h1>Cartola by Edinho</h1>
+        <Status></Status>
+        <Mercado></Mercado>
+      </div>
+    </body>
+    </html>
+ </Fragment>
 )
 
 export default IndexPage
