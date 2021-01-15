@@ -1,16 +1,9 @@
 import React, {Component, Fragment} from 'react'
 
-interface Atletas {
-  id: string,
-  title: string,
-  completed: boolean
-}
-
 class Mercado extends Component{
   state={
     atletas:[],
-    loading: true,
-    error: false
+    loading: true
   }
 
 /*   componentDidMount() {
@@ -27,7 +20,7 @@ class Mercado extends Component{
       }));
   }
   render(){
-    const {atletas, loading, error} = this.state;
+    const {atletas, loading} = this.state;
     return(
       <Fragment>
         {loading && <div>Loading...</div>}
