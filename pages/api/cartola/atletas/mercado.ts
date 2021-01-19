@@ -10,6 +10,7 @@ async function fetchAtletasMercado(_req: NextApiRequest, res: NextApiResponse){
             }
           )          
         let mercado = await response.json()
+        response.setHeader('Cache-Control', 's-maxage=600, stale-while-revalidate')
         res.status(200).json(mercado)
     }catch (error){
         res.status(500).json({ statusCode: 500, message: error.message })
