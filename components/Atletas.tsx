@@ -23,6 +23,7 @@ class Mercado extends Component{
     const {atletas, loading} = this.state;
     return(
       <Fragment>
+        Mercado
         {loading && <div>Loading...</div>}
         {!loading && atletas.map((atleta:any)=>
           <li>{atleta.apelido}</li>

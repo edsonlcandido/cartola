@@ -15,7 +15,7 @@ const IndexPage = () => (
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div>
         <h1>Cartola by Edinho</h1>
-        <Status></Status>
+        <Status>mercado </Status>        
         <Mercado></Mercado>
       </div>
     </body>
