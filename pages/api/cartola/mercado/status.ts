@@ -10,7 +10,7 @@ async function fetchMercadoStatus(_req: NextApiRequest, res: NextApiResponse){
             }
           )          
         let mercadoStatus = await response.json()
-
+        res.setHeader('Cache-Control', 's-maxage=600, stale-while-revalidate')
         res.status(200).json(mercadoStatus)
     }catch (error){
         res.status(500).json({ statusCode: 500, message: error.message })

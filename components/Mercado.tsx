@@ -1,5 +1,7 @@
 import React, { Component, Fragment} from 'react'
 
+let Data = {}
+
 class Status extends Component{
     constructor(props: {} | Readonly<{}>){
       super(props);
@@ -9,8 +11,8 @@ class Status extends Component{
       };
     }
   
-    componentWillMount() {
-      fetch("/api/cartola/status")
+    componentDidMount() {
+      fetch("/api/cartola/mercado/status")
         .then(response => response.json())
         .then(data => this.setState({ status : data}));
     }
@@ -27,4 +29,4 @@ class Status extends Component{
     }
   }
 
-  export default Status
+export {Status, Data}

@@ -6,11 +6,6 @@ class Mercado extends Component{
     loading: true
   }
 
-/*   componentDidMount() {
-    fetch("/api/cartola/atletas/mercado")
-      .then(response => response.json())
-      .then(response => this.setState({atletas: response.atletas}));
-  } */
   componentDidMount() {
     fetch("/api/cartola/atletas/mercado")
       .then(response => response.json())
@@ -23,6 +18,7 @@ class Mercado extends Component{
     const {atletas, loading} = this.state;
     return(
       <Fragment>
+        Mercado
         {loading && <div>Loading...</div>}
         {!loading && atletas.map((atleta:any)=>
           <li>{atleta.apelido}</li>
@@ -32,4 +28,4 @@ class Mercado extends Component{
   }
 }
 
-  export {Mercado}
+export {Mercado}
