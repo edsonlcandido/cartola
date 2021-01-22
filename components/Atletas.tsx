@@ -6,11 +6,6 @@ class Mercado extends Component{
     loading: true
   }
 
-/*   componentDidMount() {
-    fetch("/api/cartola/atletas/mercado")
-      .then(response => response.json())
-      .then(response => this.setState({atletas: response.atletas}));
-  } */
   componentDidMount() {
     fetch("/api/cartola/atletas/mercado")
       .then(response => response.json())
@@ -33,4 +28,4 @@ class Mercado extends Component{
   }
 }
 
-  export {Mercado}
+export {Mercado}

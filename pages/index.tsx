@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import Head from 'next/head'
-import Status from '../components/Status'
+import {Status, Data} from '../components/Mercado'
 import {Mercado} from '../components/Atletas'
 
 const IndexPage = () => (
@@ -15,7 +15,7 @@ const IndexPage = () => (
       <noscript>You need to enable JavaScript to run this app.</noscript>
       <div>
         <h1>Cartola by Edinho</h1>
-        <Status>mercado </Status>        
+        <Status>mercado </Status>      
         <Mercado></Mercado>
       </div>
     </body>
