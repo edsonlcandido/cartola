@@ -2,15 +2,13 @@ import React, { Component, Fragment} from 'react'
 
 let Data = {}
 
-class Status extends Component{
-    constructor(props: {} | Readonly<{}>){
-      super(props);
-  
-      this.state = {
-        status: {}
-      };
-    }
-  
+class Status extends Component{  
+    state = {
+      status: {
+        status_mercado:0
+      }
+    }; 
+
     componentDidMount() {
       fetch("/api/cartola/mercado/status")
         .then(response => response.json())
